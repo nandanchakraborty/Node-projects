@@ -1,0 +1,27 @@
+<div class="author">
+  <h1 class="author__heading">Hi, I am Nandan.</h1>
+  <p class="author__body"> Learning Web development .</p>
+</div>
+
+ <img src = "images/noah-silliman-gzhyKEo_cbU-unsplash.jpg"alt = "person looking out through window" class = "hero-image" width = "920" height = "500">
+<section class="articles">
+  <h2 class="articles__heading">Latest Posts</h2>
+
+  <ul class="article-ul">
+    <% data.forEach(post => { %>
+      <li>
+        <a href="/post/<%= post._id %>">
+          <span><%= post.title %></span>
+          <span class="article-list__date">
+            <%= new Date(post.createdAt).toDateString() %>
+          </span>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+
+  <% if (typeof nextPage !== 'undefined' && nextPage !== null) { %>
+    <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+  <% } %>
+
+</section>
