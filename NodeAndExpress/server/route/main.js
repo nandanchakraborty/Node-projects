@@ -95,8 +95,8 @@ router.get('/about',(req,res)=>{
     
 })
 
-router.post('/contact' ,(req,res)=>{
-    res.send(hello);
+router.get('/contact' ,(req,res)=>{
+    res.send({message : "hello ,hotline : 1234567890"});
 })
 
 module.exports = router;
