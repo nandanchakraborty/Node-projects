@@ -139,7 +139,7 @@ app.get('/posts', async (req, res) => {
 });
 
 // READ - Get a single post by ID
-app.get(' /posts/:id', async (req, res) => {
+app.get('/posts/:id', async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -159,7 +159,7 @@ app.get(' /posts/:id', async (req, res) => {
 });
 
 // UPDATE - Update a post
-app.put(' /posts/:id', async (req, res) => {
+app.put('/posts/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const { title, content, published } = req.body;
@@ -181,7 +181,7 @@ app.put(' /posts/:id', async (req, res) => {
 });
 
 // DELETE - Delete a post
-app.delete(' /posts/:id', async (req, res) => {
+app.delete('/posts/:id', async (req, res) => {
   try {
     const { id } = req.params;
 
